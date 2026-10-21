@@ -42,6 +42,17 @@ while(again.ToLower() == "a" )
         Console.Write("Nezadali jste kladné celé číslo. Zadejte diferenci znovu: ");
     }
 
+    // Rekapitulace zadaných hodnot
+    Console.WriteLine();
+    Console.WriteLine("=============================");
+    // Console.WriteLine($"První číslo: {first}");
+    // Console.WriteLine($"Poslední číslo: {last}");
+    // Console.WriteLine($"Diference (krok): {step}");
+    Console.WriteLine($"První číslo: {first}; Poslední číslo: {last}; Diference (krok): {step}");
+    Console.WriteLine("=============================");
+    Console.WriteLine();
+    Console.WriteLine();
+
 
 
 
