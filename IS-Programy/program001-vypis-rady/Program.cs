@@ -53,11 +53,26 @@ while(again.ToLower() == "a" )
     Console.WriteLine();
     Console.WriteLine();
 
-
-
-
-
-
+    // Výpis řady
+    Console.WriteLine("Výpis číselné řady:");
+    if(first <= last)
+    {
+        int current = first;
+        while(current <= last)
+        {
+           Console.WriteLine(current);
+           // Console.Write($"{current}; ");
+           // current = current + step;
+           // stručnější zápis přechozího řádku
+           current += step;  
+        }
+    }
+    else
+    {
+        Console.WriteLine();
+        Console.WriteLine("První číslo je větší než poslední.");
+        Console.WriteLine("Tento program umí vypsat vzestupnou řadu (od menšího k věšímu)!");
+    }
 
     // Dotaz směrem k uživateli na opakování
     Console.WriteLine();
@@ -68,6 +83,3 @@ while(again.ToLower() == "a" )
     Console.Write("Chcete program spustit znovu? ");
     again = Console.ReadLine() ?? "";
 }
-
-
-
