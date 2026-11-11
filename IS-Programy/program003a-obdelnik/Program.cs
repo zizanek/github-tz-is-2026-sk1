@@ -59,7 +59,16 @@ while(again.ToLower() == "a" )
     // Jádro vykreslovacího algoritmu
     // Vnější cyklus, který nám bude hlídat počet řádků (shora dolů)
     for(int i = 1; i <= height; i++)
-    {
+    {   
+        if(i % 2 == 0)
+        {
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+        }
+        
         // Vnitřní cyklus, který se nám postará o to, aby se v každém řádku vykreslil správný počet znaků
         for (int j = 1; j <= width; j++)
         {
@@ -69,7 +78,7 @@ while(again.ToLower() == "a" )
         Console.WriteLine();
         
     }
-        
+    Console.ResetColor();    
 
     // Dotaz směrem k uživateli na opakování
     Console.WriteLine();
