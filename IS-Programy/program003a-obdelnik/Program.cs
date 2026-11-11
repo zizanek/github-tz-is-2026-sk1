@@ -64,9 +64,10 @@ while(again.ToLower() == "a" )
         for (int j = 1; j <= width; j++)
         {
             Console.Write("* ");
+            System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(100)); // Zpoždění - program v tuto chvíli čeká
         }
         Console.WriteLine();
-        System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(100)); // Zpoždění - program v tuto chvíli čeká
+        
     }
         
 
