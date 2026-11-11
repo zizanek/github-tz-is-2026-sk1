@@ -66,6 +66,7 @@ while(again.ToLower() == "a" )
             Console.Write("* ");
         }
         Console.WriteLine();
+        System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(100)); // Zpoždění - program v tuto chvíli čeká
     }
         
 
