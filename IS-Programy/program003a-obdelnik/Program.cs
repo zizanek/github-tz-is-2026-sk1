@@ -43,6 +43,30 @@ while(again.ToLower() == "a" )
     Console.WriteLine();
     Console.WriteLine();
 
+    // Zde budeme pokračovat konkrétním algoritmem
+    /* 
+    
+    šířka 4
+    výška 4
+
+    * * * * 
+    * * * * 
+    * * * * 
+    * * * * 
+    
+    */
+    
+    // Jádro vykreslovacího algoritmu
+    // Vnější cyklus, který nám bude hlídat počet řádků (shora dolů)
+    for(int i = 1; i <= height; i++)
+    {
+        // Vnitřní cyklus, který se nám postará o to, aby se v každém řádku vykreslil správný počet znaků
+        for (int j = 1; j <= width; j++)
+        {
+            Console.Write("* ");
+        }
+        Console.WriteLine();
+    }
         
 
     // Dotaz směrem k uživateli na opakování
