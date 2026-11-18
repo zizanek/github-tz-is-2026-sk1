@@ -10,31 +10,38 @@ while(again.ToLower() == "a" )
     
     // Hlavička programu
     Console.WriteLine("*************************************");
-    Console.WriteLine("************ Název programu *************");
+    Console.WriteLine("** Generátor pseudonáhodných čísel ***");
     Console.WriteLine("*************************************");
     Console.WriteLine("*********** Tomáš Žižka *************");
     Console.WriteLine("*************************************");
     Console.WriteLine();
     Console.WriteLine();
 
-    // Načtení první hodnoty 
-    Console.Write("Zadejte číslo (celé číslo): ");
-    int aaa;
-    while(!int.TryParse(Console.ReadLine(), out aaa)) {
-        Console.Write("Nezadali jste celé číslo. Zadejte číslo znovu: ");
+    // Počet generovaných čísel (větší než nula)
+    Console.Write("Zadejte počet generovaných čísel (přirozené číslo): ");
+    int n;
+    while(!int.TryParse(Console.ReadLine(), out n) || n <= 0) {
+        Console.Write("Nezadali jste přirozené číslo. Zadejte počet čísel znovu: ");
     }
 
-    // Načtení druhé hodnoty řady
-    Console.Write("Zadejte další číslo (celé číslo): ");
-    int bbb;
-    while(!int.TryParse(Console.ReadLine(), out bbb)) {
-        Console.Write("Nezadali jste celé číslo. Zadejte druhé číslo znovu: ");
+    // Načtení dolní meze
+    Console.Write("Zadejte dolní mez (celé číslo): ");
+    int lowerBound;
+    while(!int.TryParse(Console.ReadLine(), out lowerBound)) {
+        Console.Write("Nezadali jste celé číslo. Zadejte dolní mez znovu: ");
+    }
+
+    // Načtení horní meze
+    Console.Write("Zadejte horní mez (celé číslo větší nebo rovno hodnotě dolní meze): ");
+    int upperBound;
+    while(!int.TryParse(Console.ReadLine(), out upperBound) || upperBound < lowerBound) {
+        Console.Write("Nezadali jste celé číslo větší nebo rovno hodnotě dolní meze. Zadejte horní mez znovu: ");
     }
 
     // Rekapitulace zadaných hodnot
     Console.WriteLine();
     Console.WriteLine("=============================");
-    Console.WriteLine($"První číslo: {aaa}; Další číslo: {bbb};");
+    Console.WriteLine($"Počet čísel: {n}; Dolní mez: {lowerBound}; Horní mez: {upperBound};");
     Console.WriteLine("=============================");
     Console.WriteLine();
     Console.WriteLine();
