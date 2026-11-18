@@ -38,7 +38,7 @@ while(again.ToLower() == "a" )
         Console.Write("Nezadali jste celé číslo větší nebo rovno hodnotě dolní meze. Zadejte horní mez znovu: ");
     }
 
-    // Rekapitulace zadaných hodnot
+    // Rekapitulace zadaných vstupních hodnot
     Console.WriteLine();
     Console.WriteLine("=============================");
     Console.WriteLine($"Počet čísel: {n}; Dolní mez: {lowerBound}; Horní mez: {upperBound};");
